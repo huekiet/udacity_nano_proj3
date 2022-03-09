@@ -11,7 +11,6 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
 
 (async () => {
   console.log("=============config: ", config);
-  console.log("=============sequelize: ", sequelize);
   console.log("===============process.env.PORT:", process.env.PORT)
 
   await sequelize.addModels(V0_FEED_MODELS);
@@ -48,7 +47,7 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
 
   // Start the Server
   app.listen( port, () => {
-    console.log( `server running ${config.url}` );
+    console.log( `server running ${port}` );
     console.log( `press CTRL+C to stop server` );
   } );
 })();

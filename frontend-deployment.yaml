@@ -1,22 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-frontend-app
+  name: frontend
   labels:
-    app: udagram-frontend-app
+    service: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-frontend-app
+      service: frontend
   template:
     metadata:
       labels:
-        app: udagram-frontend-app
+        service: frontend
     spec:
       containers:
-      - name: udagram-frontend
+      - name: frontend
         image: huekiet/udagram-frontend
-        ports:
-        - containerPort: 80
+        envFrom:
+        - secretRef:
+            name: env-secret
+        - configMapRef:
+            name: env-configmap
 

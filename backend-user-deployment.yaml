@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-api-user-app
+  name: backend-user
   labels:
-    app: udagram-api-user-app
+    service: backend-user
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-api-user-app
+      service: backend-user
   template:
     metadata:
       labels:
-        app: udagram-api-user-app
+        service: backend-user
     spec:
       containers:
-      - name: udagram-api-user
+      - name: backend-user
         image: huekiet/udagram-api-user
         envFrom:
         - secretRef:

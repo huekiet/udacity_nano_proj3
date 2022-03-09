@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-api-feed-app
+  name: backend-feed
   labels:
-    app: udagram-api-feed-app
+    service: backend-feed
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-api-feed-app
+      service: backend-feed
   template:
     metadata:
       labels:
-        app: udagram-api-feed-app
+        service: backend-feed
     spec:
       containers:
-      - name: udagram-api-feed
+      - name: backend-feed
         image: huekiet/udagram-api-feed
         envFrom:
         - secretRef:
