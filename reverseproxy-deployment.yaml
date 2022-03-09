@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: udagram-reverseproxy-app
   labels:
-    app: udagram-reverseproxy-app
+    run: udagram-reverseproxy-app
 spec:
   replicas: 1
   selector:

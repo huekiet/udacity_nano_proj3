@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: udagram-reverseproxy-app
+    run: udagram-reverseproxy-app
   name: udagram-reverseproxy-svc
 spec:
   ports:
