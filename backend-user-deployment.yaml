@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udagram-api-user-app
+  labels:
+    app: udagram-api-user-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udagram-api-user-app
+  template:
+    metadata:
+      labels:
+        app: udagram-api-user-app
+    spec:
+      containers:
+      - name: udagram-api-user
+        image: huekiet/udagram-api-user
+        ports:
+        - containerPort: 80
+
