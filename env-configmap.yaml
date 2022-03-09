@@ -4,8 +4,8 @@ data:
   AWS_BUCKET: my-104807693164-bucket-proj3
   AWS_PROFILE: default
   AWS_REGION: ap-southeast-1
-  POSTGRESS_DB: postgres
-  POSTGRESS_HOST: my-104807693164-rds-proj3.conjkflcqheq.ap-southeast-1.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: my-104807693164-rds-proj3.conjkflcqheq.ap-southeast-1.rds.amazonaws.com
   URL: http://localhost:8100
   
 metadata:

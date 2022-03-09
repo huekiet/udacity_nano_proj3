@@ -19,4 +19,9 @@ spec:
         image: huekiet/udagram-api-feed
         ports:
         - containerPort: 80
+        envFrom:
+        - secretRef:
+            name: env-secret
+        - configMapRef:
+            name: env-configmap
 

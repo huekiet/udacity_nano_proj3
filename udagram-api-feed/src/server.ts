@@ -10,7 +10,7 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
 
 
 (async () => {
-  console.log("=============config.aws_media_bucket: ", config.aws_media_bucket);
+  console.log("=============config: ", config);
   console.log("=============sequelize: ", sequelize);
 
   await sequelize.addModels(V0_FEED_MODELS);
