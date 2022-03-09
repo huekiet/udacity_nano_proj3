@@ -12,6 +12,7 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 (async () => {  
   console.log("=============config: ", config);
   console.log("=============sequelize: ", sequelize);
+  console.log("===============process.env.PORT:", process.env.PORT)
   await sequelize.addModels(V0_USER_MODELS);
 
   console.debug("Initialize database connection...");
