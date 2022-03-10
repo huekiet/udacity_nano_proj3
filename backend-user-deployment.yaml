@@ -17,9 +17,26 @@ spec:
       containers:
       - name: backend-user
         image: huekiet/udagram-api-user
+        imagePullPolicy: Always  
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m" 
         envFrom:
         - secretRef:
             name: env-secret
         - configMapRef:
             name: env-configmap
+        volumeMounts:
+        - name: aws-secret
+          mountPath: "/root/.aws/"
+          readOnly: true
+      restartPolicy: Always
+      volumes:
+      - name: aws-secret
+        secret:
+          secretName: aws-secret       
 
